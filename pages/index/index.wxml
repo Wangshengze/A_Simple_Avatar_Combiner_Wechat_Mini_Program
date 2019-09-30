@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- Drawing board -->
+<text>\n</text>
+<text>\n</text>
+<text>\n</text>
+<text>\n</text>
+  <canvas canvas-id="myAvatar" class="canvas"></canvas>
+<text>\n</text>
+<text>\n</text>
+<text>\n</text>
+  <!-- Buttons -->
+  <button class="btn-save" bindtap="upload">      UPLOAD      </button>
+  <button disabled="{{ !save }}" class="btn-save" bindtap="saveImg">      SAVE      </button>
+<text>\n</text>
+<text>\n</text>
+<view class="main">©wangshengze.com</view>
+<view class="main">Your Organization</view>
+
+
+</view>
+
