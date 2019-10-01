@@ -33,18 +33,14 @@ Page({
   },
 
 
-  drawAvatar() {
+ drawAvatar() {
     var that = this;
     var p = that.data;
     context = wx.createCanvasContext('myAvatar', this);
-    context.drawImage(p.src, 33, 33, 190, 190);
+    context.drawImage(p.src, 0, 0, 256, 256)
+    context.drawImage(p.hat.url, 0, 0, 256, 256);
     context.draw(true)
-    context.save();
-    context.translate(p.hat.x, p.hat.y)
-    context.scale(p.hat.b, p.hat.b)
-    context.rotate(p.hat.rotate * Math.PI / 180)
-    context.drawImage(p.hat.url, 0, 0, p.hat.w, p.hat.h)
-    context.draw(true)
+    context.save()
     this.setData({
       save: true
     })
